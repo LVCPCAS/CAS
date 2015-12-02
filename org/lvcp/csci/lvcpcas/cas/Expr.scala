@@ -19,7 +19,7 @@ case class Power(base: Expr, exponent: Expr) extends Expr {
 		Power(base.substitute(substitutions:_*), exponent.substitute(substitutions:_*))
 }
 
-case class ScalarConst(value: BigInt) extends Expr {
+case class ScalarConst(value: ComplexNum) extends Expr {
 	override def substitute(substitutions: (Var, Expr)*) = this
 }
 
